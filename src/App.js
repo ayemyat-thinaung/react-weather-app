@@ -54,7 +54,10 @@ function App() {
           <h2 className="text-2xl font-bold text-yellow-400 ">
             Weather Forecast App
           </h2>
-          <span className="text-xs">{moment().format("llll")}</span>
+
+          <span className="text-xs">
+            {city.toUpperCase() || "YANGON"} | {moment().format("llll")}
+          </span>
 
           {/* Search by city form */}
           <div className="my-3">
@@ -63,13 +66,10 @@ function App() {
               type="text"
               value={city}
               placeholder="Search by city"
-              onChange={(e) => {
-                if (e.target.value) {
-                  setCity(e.target.value);
-                }
-              }}
+              onChange={(e) => setCity(e.target.value)}
             />
             <button
+              disabled={!city}
               type="button"
               onClick={onSearch}
               className="bg-sky-400 text-white p-2"
