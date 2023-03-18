@@ -35,8 +35,6 @@ function App() {
     getWeather(latitude, longitude);
   }, [latitude, longitude]);
 
-  console.log("lat", lat, lng, latitude, longitude);
-
   const onSearch = () => {
     axios
       .get(`https://geocoding-api.open-meteo.com/v1/search?name=${city}`)
@@ -48,7 +46,7 @@ function App() {
       .finally(() => setLoading(false));
   };
 
-  console.log("weather", data);
+  // console.log("weather", data);
   return (
     <div className="flex justify-center content-center min-h-screen bg-sky-200">
       <div className="w-1/2 md:w-1/4 grid place-items-center bg-gray-100 rounded shadow-sm p-5">
