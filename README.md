@@ -75,4 +75,4 @@ API docs: [Open Meteo Free Weather API](https://open-meteo.com/en/docs)
 
 ### App Demo
 
-Deployed over vercel []()
+Deployed over vercel [https://react-weather-app-sage-nine.vercel.app/](https://react-weather-app-sage-nine.vercel.app/)
