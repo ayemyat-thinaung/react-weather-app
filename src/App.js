@@ -125,7 +125,10 @@ function App() {
               <h4 className="my-3 font-medium">Weekly Weather Forecast</h4>
               <div className="grid grid-cols-1 gap-2">
                 {Array.from({ length: 6 }, (_i, arr) => (
-                  <div className="p-2 rounded-sm border flex justify-between">
+                  <div
+                    className="p-2 rounded-sm border flex justify-between"
+                    key={arr}
+                  >
                     <div>
                       <div className="text-xs text-gray-500">
                         {moment(data?.daily?.time[arr + 1]).format("ll")}
