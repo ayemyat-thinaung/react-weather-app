@@ -56,7 +56,7 @@ function App() {
           </h2>
 
           <span className="text-xs">
-            {city.toUpperCase() || "YANGON"} | {moment().format("llll")}
+            {city?.toUpperCase() || "YANGON"} | {moment().format("llll")}
           </span>
 
           {/* Search by city form */}
